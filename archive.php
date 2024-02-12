@@ -43,9 +43,6 @@ $cat_fillter = get_field("category_fillter", "option");
 				</a>
 			<?php endforeach; ?>
 		</div>
-
-
-
 		<div class="blog-list fade-in-bottom">
 			<?php if (have_posts()): ?>
 				<?php
@@ -58,7 +55,6 @@ $cat_fillter = get_field("category_fillter", "option");
 			endif;
 			?>
 		</div>
-
 		<button class="blog-button greybuttonMobl">View all</button>
 	</div>
 </section>
