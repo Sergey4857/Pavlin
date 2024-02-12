@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Bodoni"), local("Bodoni"),
+    url("../fonts/BodoniFerraraOrigin-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CoreSans-extrabold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("CoreSans"), local("CoreSans"),
+    url("../fonts/CoreSansC-75ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "CoreSans-bold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("CoreSans"), local("CoreSans"),
+    url("../fonts/CoreSansC-65Bold.woff2") format("woff");
+}
+@font-face {
+  font-family: "CoreSans-medium";
+  font-style: normal;
+  font-weight: 400;
+  src: local("CoreSans"), local("CoreSans"),
+    url("../fonts/CoreSansC-55Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Novecentosans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Novecentosans"), local("Novecentosans"),
+    url("../fonts/Novecentosans-Normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Baskerville"), local("Baskerville"),
+    url("../fonts/Baskerville-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PeachClassy";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PeachClassy"), local("PeachClassy"),
+    url("../fonts/PeachClassy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PlayfairDisplay"), local("PlayfairDisplay"),
+    url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("OpenSans"), local("OpenSans"),
+    url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 500;
+  src: local("OpenSans"), local("OpenSans"),
+    url("../fonts/OpenSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("OpenSans"), local("OpenSans"),
+    url("../fonts/OpenSans-Bold.ttf") format("truetype");
+}

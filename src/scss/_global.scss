@@ -1,0 +1,104 @@
+@import "fonts";
+
+html {
+  font-size: calc(100vw / 1920);
+  @media (max-width: 1280px) {
+    font-size: calc(100vw / 1280);
+  }
+  @media (max-width: 768px) {
+    font-size: calc(100vw / 768);
+  }
+}
+
+:root {
+  --blue: #726abf;
+  --blue-two: #01aae6;
+  --blue-three: #88abe9;
+  --light-blue: #e7e7fd;
+  --white: #ffffff;
+  --white-two: #f2f6fc;
+  --white-three: #f3f4f5;
+  --white-four: #f2f7ff;
+  --black: #1e354e;
+  --black-two: #000233;
+  --grey: #828d9e;
+  --grey-two: #b8b8b8;
+  --yellow: #fbb605;
+  --yellow-two: #fcc875;
+  --yellow-three: #faedda;
+}
+
+[class*="-innerContainer"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "OpenSans";
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

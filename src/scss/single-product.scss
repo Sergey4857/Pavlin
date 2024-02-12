@@ -1,0 +1,259 @@
+.product-innerContainer {
+  .product {
+    width: 100%;
+    max-width: 1700rem;
+    padding: 50rem 0;
+    display: flex;
+    gap: 40rem;
+
+    @media screen and (max-width: 1280px) {
+      max-width: 1180rem;
+      padding-top: 40rem;
+      padding-bottom: 0rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      max-width: 710rem;
+      padding-top: 117rem;
+      padding-bottom: 0rem;
+      flex-direction: column;
+    }
+
+    .gallery {
+      width: 50%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      .woo-product-gallery-slider {
+        width: 100%;
+        margin-bottom: 0;
+        .slick-slide {
+          background-color: #121212;
+        }
+      }
+      .wpgs-nav {
+        .slick-slide {
+          background-color: transparent;
+        }
+      }
+    }
+    .product-content {
+      width: 50%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      .product-navigation {
+        color: #949494;
+        font-size: 25rem;
+        margin-bottom: 40rem;
+
+        @media screen and (max-width: 1280px) {
+          font-size: 23rem;
+          margin-bottom: 30rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          position: absolute;
+          top: 42rem;
+          left: 0;
+          font-size: 31rem;
+        }
+
+        nav {
+          margin-bottom: 0;
+        }
+      }
+      h1 {
+        font-size: 63rem;
+        font-family: "Baskerville";
+        margin-bottom: 40rem;
+        @media screen and (max-width: 1280px) {
+          font-size: 55rem;
+          margin-bottom: 30rem;
+        }
+      }
+      .price {
+        font-family: "PeachClassy";
+        font-size: 54rem;
+        margin-bottom: 58rem;
+        color: #121212;
+        ins {
+          text-decoration: none;
+        }
+
+        @media screen and (max-width: 1280px) {
+          font-size: 47rem;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 54rem;
+        }
+      }
+      button {
+        width: 100%;
+        font-size: 26rem;
+        color: #fff;
+        padding: 20rem 30rem;
+        background-color: #121212;
+        text-transform: uppercase;
+        letter-spacing: 4rem;
+        font-family: "Novecentosans";
+        margin-bottom: 40rem;
+        transition: transform 300ms ease-in-out;
+        &:hover {
+          transform: scale(1.01);
+          background-color: #121212;
+        }
+      }
+      .cart-link {
+        display: block;
+        width: 100%;
+        font-size: 26rem;
+        color: #fff;
+        padding: 20rem 30rem;
+        background-color: #121212;
+        text-transform: uppercase;
+        letter-spacing: 4rem;
+        font-family: "Novecentosans";
+        margin-bottom: 40rem;
+        text-align: center;
+        transition: transform 300ms ease-in-out;
+        &:hover {
+          transform: scale(1.01);
+          background-color: #121212;
+        }
+      }
+      .product-details {
+        margin-bottom: 44rem;
+
+        @media screen and (max-width: 1280px) {
+          font-size: 25rem;
+        }
+
+        .product-list {
+          display: flex;
+          flex-direction: column;
+          gap: 15rem;
+          font-size: 26rem;
+
+          @media screen and (max-width: 1280px) {
+            font-size: 25rem;
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 34rem;
+          }
+
+          .product-item {
+            font-family: "Baskerville";
+            span {
+              font-family: "CoreSans-bold";
+            }
+          }
+        }
+      }
+      .cart {
+        margin-bottom: 0;
+
+        button {
+          margin-bottom: 0;
+        }
+        a {
+        }
+      }
+    }
+  }
+}
+
+.related-innerContainer {
+  .related {
+    width: 100%;
+    max-width: 1700rem;
+    padding: 50rem 0;
+
+    @media screen and (max-width: 1280px) {
+      max-width: 1180rem;
+      padding-top: 40rem;
+      padding-bottom: 0rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      max-width: 710rem;
+      padding-top: 77rem;
+      padding-bottom: 0rem;
+    }
+
+    h2 {
+      margin-bottom: 30rem;
+      font-size: 30rem;
+      font-family: "CoreSans-bold";
+      text-transform: uppercase;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 67rem;
+        font-size: 42rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 13rem;
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+
+      li {
+        background-color: #fafafa;
+        width: calc((100% - 40rem) / 4);
+        padding: 0 20rem 30rem 20rem;
+        overflow: hidden;
+        @media screen and (min-width: 768px) {
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+        a {
+          .goods-price {
+            font-size: 27rem;
+            color: #8e8d8c;
+            margin-bottom: 10rem;
+
+            @media screen and (max-width: 1280px) {
+              font-size: 24rem;
+              text-align: center;
+            }
+            @media screen and (max-width: 768px) {
+              font-size: 38rem;
+            }
+          }
+          .goods-model {
+            font-size: 26rem;
+            font-family: "CoreSans-bold";
+            font-weight: 700;
+
+            @media screen and (max-width: 1280px) {
+              font-size: 24rem;
+              text-align: center;
+            }
+            @media screen and (max-width: 768px) {
+              font-size: 38rem;
+            }
+          }
+          img {
+            transition: transform 300ms ease-in-out;
+          }
+        }
+      }
+    }
+
+    .slick-initialized {
+      button {
+        &::before {
+          color: #121212;
+        }
+      }
+    }
+  }
+}
