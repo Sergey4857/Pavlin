@@ -8,12 +8,9 @@
  *
  * @package pavlin
  */
-
 ?>
-
 <?php
 $my_post_language_details = apply_filters('wpml_current_language', NULL, 1);
-
 if ($my_post_language_details === 'ru') {
 	$cart_link = 'https://pavlin.test/ru/cart/';
 } elseif ($my_post_language_details === 'uk') {
@@ -23,7 +20,6 @@ if ($my_post_language_details === 'ru') {
 }
 ?>
 
-
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
@@ -31,7 +27,6 @@ if ($my_post_language_details === 'ru') {
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -41,32 +36,24 @@ if ($my_post_language_details === 'ru') {
 			<div class="header-nav">
 				<?php wp_nav_menu(['theme_location' => 'navigation']); ?>
 			</div>
-
 			<button type="button" class="btn-mobile-menu">
 			</button>
-
 			<div class="header-logo-box">
 				<a class="header-logo" href="/">
 					<img src="<?php echo get_field("logo", "option"); ?>" alt="pavlin">
 					<span>Pavlin</span>
 				</a>
 			</div>
-
 			<div class="header-block">
 				<a href=" <?php echo $cart_link ?>" class="header-shop">
 					<img src="<?php echo get_template_directory_uri() . "./src/icons/bag.svg" ?>" alt="shop">
-
-
-
 					<small class="product_counter">
 						<?php $items_count = WC()->cart->get_cart_contents_count(); ?>
 						<span class="mini-cart-count">
 							<?php echo $items_count ? $items_count : '0'; ?>
 						</span>
 					</small>
-
 				</a>
-
 			</div>
 		</header>
 	</section>
