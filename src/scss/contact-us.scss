@@ -205,6 +205,13 @@
         @media screen and (max-width: 768px) {
           max-width: 710rem;
         }
+        .wpforms-confirmation-container-full {
+          font-size: 22rem;
+
+          span {
+            text-wrap: wrap;
+          }
+        }
 
         .wpforms-form {
           .wpforms-field-container {

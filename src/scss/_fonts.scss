@@ -85,3 +85,10 @@
   src: local("OpenSans"), local("OpenSans"),
     url("../fonts/OpenSans-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Tinos";
+  font-style: normal;
+  font-weight: 400;
+  src: local("OpenSans"), local("Tinos-Regular"),
+    url("../fonts/Tinos-Regular.ttf") format("truetype");
+}

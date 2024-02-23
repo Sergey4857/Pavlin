@@ -145,7 +145,7 @@
       }
       span {
         font-size: 23rem;
-        font-family: "AWC";
+        font-family: "Tinos";
         letter-spacing: 3rem;
         color: #121212;
         text-transform: uppercase;
@@ -165,7 +165,7 @@
       }
 
       .logo {
-        font-family: "AWC";
+        font-family: "Tinos";
         font-size: 24rem;
         font-weight: 400;
         text-transform: uppercase;
@@ -196,7 +196,10 @@
         div,
         span,
         p {
-          font-size: 20rem;
+          font-size: 15rem;
+          @media screen and (max-width: 768px) {
+            font-size: 21rem;
+          }
         }
       }
     }
@@ -356,6 +359,12 @@
         }
       }
     }
+  }
+  .slick-prev {
+    z-index: 8;
+  }
+  .slick-next {
+    z-index: 8;
   }
   .sub-menu {
     color: #121212;

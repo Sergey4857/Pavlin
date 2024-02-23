@@ -12,9 +12,9 @@
 <?php
 $my_post_language_details = apply_filters('wpml_current_language', NULL, 1);
 if ($my_post_language_details === 'ru') {
-	$cart_link = 'https://pavlin.test/ru/cart/';
+	$cart_link = 'https://pavlin.boutique/ru/cart/';
 } elseif ($my_post_language_details === 'uk') {
-	$cart_link = 'https://pavlin.test/uk/cart/';
+	$cart_link = 'https://pavlin.boutique/uk/cart/';
 } else {
 	$cart_link = '/cart/';
 }
@@ -34,7 +34,10 @@ if ($my_post_language_details === 'ru') {
 	<section class="header-innerContainer">
 		<header class="<?php if (is_front_page()): ?>header header-home<?php else: ?>header<?php endif; ?>">
 			<div class="header-nav">
-				<?php wp_nav_menu(['theme_location' => 'navigation']); ?>
+				<?php wp_nav_menu([
+					'theme_location' => 'navigation',
+
+				]); ?>
 			</div>
 			<button type="button" class="btn-mobile-menu">
 			</button>
@@ -45,15 +48,19 @@ if ($my_post_language_details === 'ru') {
 				</a>
 			</div>
 			<div class="header-block">
-				<a href=" <?php echo $cart_link ?>" class="header-shop">
-					<img src="<?php echo get_template_directory_uri() . "./src/icons/bag.svg" ?>" alt="shop">
-					<small class="product_counter">
-						<?php $items_count = WC()->cart->get_cart_contents_count(); ?>
-						<span class="mini-cart-count">
-							<?php echo $items_count ? $items_count : '0'; ?>
-						</span>
-					</small>
+				<a href="<?php echo $cart_link ?>" class="header-shop">
+					<img src="<?php echo get_template_directory_uri() . "/src/icons/bag.svg" ?>" alt="shop">
+
+					<div class="header-cart-count">
+						<?php $items_count = WC()->cart->get_cart_contents_count();
+
+						echo '<div id="mini-cart-count"><?php echo $items_count ?></div>'; ?>
+
+					</div>
 				</a>
+			</div>
+
+			</a>
 			</div>
 		</header>
 	</section>

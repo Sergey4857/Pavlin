@@ -15,6 +15,10 @@ jQuery(document).ready(function ($) {
 
   $(".products .columns-4").addClass("one-time");
 
+  //делаю сслылку языка не переключаемой
+  $(".menu-item-has-children>a").on("click", function (event) {
+    event.preventDefault();
+  });
   //input label animation
 
   $(document).ready(function () {

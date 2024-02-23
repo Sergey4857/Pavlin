@@ -43,13 +43,14 @@ function pavlin_setup()
 }
 add_action('after_setup_theme', 'pavlin_setup');
 
+
 /**
  * Enqueue scripts and styles.
  */
 function pavlin_scripts()
 {
 	wp_enqueue_style('pavlin-style', get_stylesheet_uri(), array(), _S_VERSION);
-	wp_enqueue_style('pavlin-main', get_template_directory_uri() . '/dist/main.css', array(), _S_VERSION);
+	// wp_enqueue_style('pavlin-main', get_template_directory_uri() . '/dist/main.css', array(), _S_VERSION);
 	wp_enqueue_style('pavlin-slick-style', get_template_directory_uri() . '/assets/slick/slick.css', array(), _S_VERSION);
 
 	wp_enqueue_script("jquery");
@@ -114,27 +115,26 @@ function fix_svg()
 }
 add_action('admin_head', 'fix_svg');
 
-//Count od products in cart header
+
+//Инициализация фрагментов
+function enqueue_wc_cart_fragments()
+{
+	wp_enqueue_script('wc-cart-fragments');
+}
+add_action('wp_enqueue_scripts', 'enqueue_wc_cart_fragments');
+
+//Вывод количества товаров 
+
 add_filter('woocommerce_add_to_cart_fragments', 'wc_refresh_mini_cart_count');
 function wc_refresh_mini_cart_count($fragments)
 {
 	ob_start();
 	$items_count = WC()->cart->get_cart_contents_count();
 	?>
-	<span class="mini-cart-count">
-		<?php echo $items_count ? $items_count : '0'; ?>
-	</span>
+	<div id="mini-cart-count">
+		<?php echo $items_count ? $items_count : '&nbsp;'; ?>
+	</div>
 	<?php
-	$fragments['.mini-cart-count'] = ob_get_clean();
+	$fragments['#mini-cart-count'] = ob_get_clean();
 	return $fragments;
 }
-
-function update_header_cart_count_after_remove($cart_item_key)
-{
-	// Ваш код обновления значения в хедере
-	$cart_count = WC()->cart->get_cart_contents_count();
-
-	// Обновление значения в хедере (пример)
-	echo '<span class="header-cart-count">' . esc_html($cart_count) . '</span>';
-}
-
